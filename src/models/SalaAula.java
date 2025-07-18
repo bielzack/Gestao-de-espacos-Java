@@ -9,6 +9,17 @@ public class SalaAula extends Espaco{
         this.possuiProjetor = possuiProjetor;
     }
 
+
+
+    //COLOCAR O METODO VERIFICARDISPONIBILIDADE PARA SWING
+
+    //ALTERAR PARA INTERFACE GRAFICA
+    @Override
+    public void exibirDetalhes() { 
+        super.exibirDetalhes();
+        System.out.println("Possui projetor? " + (getPossuiprojetor() ? "Sim" : "Não"));
+    }
+
     
 
     //Getters e Setters importantes

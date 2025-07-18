@@ -6,6 +6,7 @@ public abstract class Espaco implements Agendavel {
     private String nome;
     private String localizacao;
     private int capacidade;
+
     // Discutir sobre um atributo booleano para a disponibilidade do espaço.
 
     //Método construtor da super classe
@@ -15,9 +16,20 @@ public abstract class Espaco implements Agendavel {
         this.localizacao = localizacao;
         this.capacidade = capacidade;
     }
+    
+    //Metódos implementados pela interface Agendavel
 
+    //Metodo abstrato para verificar a disponibilidade para reserva no banco de dados
+    @Override
+    public abstract boolean consultarDisponibilidade(Date data, String horaInicio, String horaFim);
 
-
+    //Metodo para exibir informações do espaço MUDAR PARA ADERIR À INTERFACE GRAFICA !!!!!!!
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Espaço: " + nome);
+        System.out.println("Localização: " + localizacao);
+        System.out.println("Capacidade: " + capacidade);
+    }
 
     //Getters e Setters importantes
     public int getID() {
