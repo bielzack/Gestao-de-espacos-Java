@@ -1,4 +1,5 @@
 package models;
+import java.util.Date;
 
 // Classe responsável pelo molde em comum dos espaços gerais do ambiente acadêmico.
 public abstract class Espaco implements Agendavel {

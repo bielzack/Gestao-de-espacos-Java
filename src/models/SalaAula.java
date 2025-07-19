@@ -1,4 +1,5 @@
 package models;
+import java.util.Date;
 
 //SubClasse que representa os espaços das salas de aula do âmbito acadêmico do sistema de gestão.
 public class SalaAula extends Espaco{
@@ -14,6 +15,12 @@ public class SalaAula extends Espaco{
     //COLOCAR O METODO VERIFICARDISPONIBILIDADE PARA SWING
 
     //ALTERAR PARA INTERFACE GRAFICA
+     @Override
+    public boolean consultarDisponibilidade(Date data, String horaInicio, String horaFim){
+        System.out.println("Verificando disponibilidade em uma sala de aula " + super.getNome() + " no dia " + data);
+        return true;
+    }
+
     @Override
     public void exibirDetalhes() { 
         super.exibirDetalhes();
